@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "A package for working with two-body Keplerian Orbits",
   "author": "Jordan Stephens <jordan@stephens.io>",
-  "main": "lib/kepler.js",
+  "main": "lib/kepler",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --require @babel/register --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -15,13 +15,16 @@
     "url": "https://github.com/jordanstephens/kepler.js/issues"
   },
   "dependencies": {
-    "es6-shim": "~0.24.0",
-    "es6-object-assign": "^1.0.1",
-    "sylvester": "0.0.21",
-    "intersect": "^1.0.1",
-    "array-equal": "^1.0.0"
+    "@kaosat-dev/sylvester": "0.0.21",
+    "array-equal": "^1.0.0",
+    "intersect": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
     "chai": "~2.0.0",
     "mocha": "~2.1.0"
   },
